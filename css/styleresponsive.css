@@ -39,14 +39,33 @@ footer {
   grid-template-rows: 80px auto 70px;
 }
 
-@media screen and (max-width: 714px) {
-  .bottom {
-    grid-column: span 3;
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-areas:
+      "header header header "
+      "nav main main"
+      "aside aside aside"
+      "footer footer footer";
+    grid-template-rows: 80px auto auto 70px;
   }
-  .left {
-    grid-column: span 3;
+  aside ul {
+    display: flex;
+    gap: 30px;
   }
 }
 
 @media screen and (max-width: 450px) {
+  h1 {
+    font-size: 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header "
+      "nav"
+      "main"
+      "aside "
+      "footer";
+    grid-template-rows: initial;
+  }
 }
