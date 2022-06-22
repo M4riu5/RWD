@@ -1,0 +1,45 @@
+.posts {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.post {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.post.large {
+  grid-column: span 2;
+}
+
+/* Taikome i raiska nuo 0 iki 714 px */
+/* iki = max */
+/* Nuo = min */
+
+@media screen and (max-width: 714px) {
+  /* Taikome i raiska nuo 0 iki 714 px */
+  .posts {
+    grid-template-columns: 1fr 1fr;
+    background-color: coral;
+  }
+  .post.large {
+    grid-column: span 2;
+  }
+  .post:last-child {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 450px) {
+  .posts {
+    grid-template-columns: 1fr;
+    background-color: darkorchid;
+  }
+  .container {
+    padding: 0 5px;
+  }
+  .posts .post {
+    grid-column: span 1;
+  }
+}
