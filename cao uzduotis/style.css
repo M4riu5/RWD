@@ -1,0 +1,46 @@
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+}
+header p {
+  font-weight: bold;
+  font-size: 35px;
+}
+nav {
+  grid-area: nav;
+  background-color: snow;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+}
+aside {
+  grid-area: aside;
+  background-color: snow;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+}
+section {
+  grid-area: section;
+  background-color: snow;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+}
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  gap: 10px;
+  grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "aside aside section section"
+    "footer footer footer footer";
+}
+img {
+  max-width: 10%;
+}
